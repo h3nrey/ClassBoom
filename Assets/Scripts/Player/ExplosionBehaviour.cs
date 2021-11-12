@@ -10,10 +10,10 @@ public class ExplosionBehaviour : MonoBehaviour
     [SerializeField] Vector2[] raysDirection;
     
     private void FixedUpdate() {
-        RaycastHit2D rayUp = Physics2D.Raycast(transform.position, raysDirection[0], rayRange, layerMask, 0);
-        RaycastHit2D rayRight = Physics2D.Raycast(transform.position, raysDirection[1], rayRange, layerMask, 0);
-        RaycastHit2D rayDown = Physics2D.Raycast(transform.position, raysDirection[2], rayRange, layerMask, 0);
-        RaycastHit2D rayLeft = Physics2D.Raycast(transform.position, raysDirection[3], rayRange, layerMask, 0);
+        RaycastHit2D rayUp = Physics2D.Raycast(transform.position, raysDirection[0], rayRange);
+        RaycastHit2D rayRight = Physics2D.Raycast(transform.position, raysDirection[1], rayRange);
+        RaycastHit2D rayDown = Physics2D.Raycast(transform.position, raysDirection[2], rayRange);
+        RaycastHit2D rayLeft = Physics2D.Raycast(transform.position, raysDirection[3], rayRange);
         
         if(rayLeft.collider != null) 
             explosionOfCreatures(rayLeft.collider.gameObject);
@@ -28,9 +28,10 @@ public class ExplosionBehaviour : MonoBehaviour
     }
 
     private void explosionOfCreatures(GameObject obj) {
-        print(obj.tag);
         if(obj.layer == 6) {
             obj.GetComponent<LifeController>().TakeDamage(1);
+        } else {
+            print("não colidiu com o player");
         }
     }
 
