@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BombBehaviour : MonoBehaviour
 {
-    [SerializeField] float bombCoolddown = 0.5f;
+    [SerializeField] float explosionCooldown,bombCoolddown = 0.5f;
     [SerializeField] float triggerCooldown = 0.6f;
     [SerializeField] LayerMask Destructable;
     bool exploded = false;
@@ -27,7 +27,7 @@ public class BombBehaviour : MonoBehaviour
 
         Invoke("explode", bombCoolddown);
         Invoke("DisableTrigger", triggerCooldown);
-        Invoke("endOfExplosion", bombCoolddown + 0.2f);
+        Invoke("endOfExplosion",bombCoolddown + explosionCooldown);
     }
 
     
@@ -35,6 +35,7 @@ public class BombBehaviour : MonoBehaviour
     void explode() {
         exploded = true;
         if(exploded) {
+            spr.enabled = false;
             explosionGameObject.SetActive(true);
             _tilemap.Explode(this.transform.position);  
         }

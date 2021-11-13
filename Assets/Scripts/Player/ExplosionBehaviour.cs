@@ -6,7 +6,6 @@ public class ExplosionBehaviour : MonoBehaviour
     [SerializeField] private float rayRange = 2f;
     [SerializeField] RaycastHit2D[] rays = new RaycastHit2D[4];
     [SerializeField] Vector2[] raysDirection;
-    
     private void FixedUpdate() {
         for (int i = 0; i < rays.Length; i++) {
             rays[i] = Physics2D.Raycast(transform.position, raysDirection[i], rayRange);
