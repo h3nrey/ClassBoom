@@ -21,7 +21,7 @@ public class LifeController : MonoBehaviour {
     private void Death() {
         Destroy(this.gameObject);
         if(isPlayer) {
-            FindObjectOfType<SceneCaller>().CallScene("GameOver");
+            FindObjectOfType<SceneCaller>().CallCoroutine("GameOver");
         }
     }
 }

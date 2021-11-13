@@ -19,7 +19,7 @@ public class ChoseSkinSelected : MonoBehaviour
         if(allDone) {
             StorerBehaviour.instance.player1SkinIndex = p1.GetComponent<ChooseSkinController>().skinIndex;
             StorerBehaviour.instance.player2SkinIndex = p2.GetComponent<ChooseSkinController>().skinIndex;
-            _sceneCaller.CallScene(sceneName);
+            _sceneCaller.CallCoroutine(sceneName);
         }
     }
 }

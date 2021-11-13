@@ -23,7 +23,7 @@ public class TimerController : MonoBehaviour {
 
             if(time <= 0) {
                 print("times up");
-                _sceneCaller.CallScene("GameOver");
+                _sceneCaller.CallCoroutine("GameOver");
             }
         } 
     }

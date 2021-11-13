@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 7549253000263542486}
   - component: {fileID: 7549253000263542487}
   - component: {fileID: 7549253000263542483}
+  - component: {fileID: 1882399823}
+  - component: {fileID: 1882399824}
   m_Layer: 0
   m_Name: MultiplayerGameManager
   m_TagString: Untagged
@@ -45,6 +47,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b562458d45d07b148a62bca432315886, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SceneTimer: 0
   nameOfTheScene: 
 --- !u!114 &7549253000263542487
 MonoBehaviour:
@@ -65,8 +68,11 @@ MonoBehaviour:
   - {fileID: 7386090304667776823, guid: 8401d2a16ee6bf942a0cba6158957800, type: 3}
   - {fileID: 4869899981154698690, guid: 3c88a1d7b2dd1514fa9136713728ec1b, type: 3}
   skins:
-  - {fileID: 2727769753523550192, guid: cd9722edeec9638488fe94798f16164e, type: 3}
+  - {fileID: 8615118911356441973, guid: 4827a1ad3d92c1a4185977dca03e235d, type: 3}
+  - {fileID: 6257873363853307628, guid: 4b54cfb7993daac4085c0ac63b9fba75, type: 3}
   - {fileID: 8076551035044601479, guid: 04ae99b12b6b3a04b8e7952d2b103e27, type: 3}
+  - {fileID: 2727769753523550192, guid: cd9722edeec9638488fe94798f16164e, type: 3}
+  Grid: {fileID: 4356685523106210288, guid: f9ca1023847da8d49abf0bf0513bdea0, type: 3}
   playersToSpawn: 2
 --- !u!114 &7549253000263542483
 MonoBehaviour:
@@ -85,3 +91,30 @@ MonoBehaviour:
   p1Text: {fileID: 0}
   p2Text: {fileID: 0}
   timeToRespawn: 1
+--- !u!114 &1882399823
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7549253000263542482}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8575224d75b37904fb08a448d3ebd588, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _sceneCaller: {fileID: 0}
+  isPaused: 0
+  pauseCanvas: {fileID: 0}
+--- !u!114 &1882399824
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7549253000263542482}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1039799fbd7aee549a060943601de766, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
