@@ -49,6 +49,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   life: 1
+  isPlayer: 0
 --- !u!114 &5041902939271227810
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -62,7 +63,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 5041902939271227808}
-  speed: 25
+  speed: 90
   Direction: {x: 1, y: 0}
   spr: {fileID: 5041902939271227813}
   anim: {fileID: 497024311}
