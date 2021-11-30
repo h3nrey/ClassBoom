@@ -1070,7 +1070,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5987949645432441233, guid: 0aa8576a36837074cb3df17bcb6802e8, type: 3}
       propertyPath: m_Name
-      value: ContinueBtn (1)
+      value: QuitBtn
       objectReference: {fileID: 0}
     - target: {fileID: 5987949645432441234, guid: 0aa8576a36837074cb3df17bcb6802e8, type: 3}
       propertyPath: m_Pivot.x
@@ -1190,7 +1190,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5987949645432441235, guid: 0aa8576a36837074cb3df17bcb6802e8, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
-      value: Level_0
+      value: InitialScene
       objectReference: {fileID: 0}
     - target: {fileID: 5987949646808652124, guid: 0aa8576a36837074cb3df17bcb6802e8, type: 3}
       propertyPath: m_SizeDelta.x
