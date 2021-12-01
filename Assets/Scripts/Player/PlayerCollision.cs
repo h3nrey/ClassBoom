@@ -13,6 +13,7 @@ public class PlayerCollision : MonoBehaviour {
     private void OnTriggerEnter2D(Collider2D other) {
         switch (other.gameObject.tag) {
             case "Explosion": _lifeController.TakeDamage(1); break;
+            case "Enemy": _lifeController.TakeDamage(1); break;
             case "WinDoor": _sceneCaller.CallCoroutine("WinGame"); break;
             default: break;
         }

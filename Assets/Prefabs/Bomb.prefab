@@ -121,7 +121,6 @@ MonoBehaviour:
   - {x: 1, y: 0}
   - {x: 0, y: -1}
   - {x: -1, y: 0}
-  explosionSound: {fileID: 0}
 --- !u!1 &8860822523298538506
 GameObject:
   m_ObjectHideFlags: 0
@@ -216,7 +215,7 @@ Animator:
   m_GameObject: {fileID: 8860822523298538506}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: f2eda417102e9524fb07dfdddb659068, type: 2}
+  m_Controller: {fileID: 9100000, guid: facd491a0c99ebd4b89016db3690d835, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

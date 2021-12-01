@@ -10,6 +10,7 @@ public class ExplosionBehaviour : MonoBehaviour
         for (int i = 0; i < rays.Length; i++) {
             rays[i] = Physics2D.Raycast(transform.position, raysDirection[i], rayRange);
             if (rays[i].collider != null)
+                print(rays[i].collider.gameObject);
                 explosionOfCreatures(rays[i].collider.gameObject);
         }
     }
