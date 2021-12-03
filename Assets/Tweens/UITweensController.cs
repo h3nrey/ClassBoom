@@ -14,9 +14,18 @@ public class UITweensController : MonoBehaviour
     [SerializeField] RectTransform imageForScale;
 
     [Header("Fade")]
-    [SerializeField] CanvasGroup imageForFade;
-    
+    [SerializeField] float fadeDuration = 0.5f;
+    [SerializeField] CanvasGroup imageForFade;   
     [SerializeField] float fadeEndPoint;
+
+    [Header("Move")]
+    [SerializeField] GameObject objectToBeMoved;
+    [SerializeField] Vector3 ObjectPos;
+    [SerializeField] float moveDuration = 0.5f;
+    [SerializeField] LeanTweenType moveEaseType;
+
+    [Header("Rotate")]
+    [SerializeField] Vector3 ObjectRotation;
     private void Awake() {
         instance = this;
     }
@@ -25,7 +34,14 @@ public class UITweensController : MonoBehaviour
         imageForScale.LeanScale(size, duration).setEase(easeType);
     }
 
+    public void Rotate() {
+        imageForScale.LeanRotate(ObjectRotation, duration);
+    }
+
+    public void Move() {
+        objectToBeMoved.LeanMove(ObjectPos, moveDuration).setEase(moveEaseType);
+    }
     public void Fade(){
-        imageForFade.LeanAlpha(fadeEndPoint, duration).setEase(easeType);
+        imageForFade.LeanAlpha(fadeEndPoint, fadeDuration).setEase(easeType);
     }
 }
