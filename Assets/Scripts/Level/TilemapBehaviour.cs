@@ -15,25 +15,30 @@ public class TilemapBehaviour : MonoBehaviour
 		Vector3Int originCell = tilemap.WorldToCell(worldPos);
 
 		ExplodeCell(originCell);
-		if (ExplodeCell(originCell + new Vector3Int(1, 0, 0)))
-		{
-			ExplodeCell(originCell + new Vector3Int(2, 0, 0));
-		}
+		ExplodeCell(originCell + new Vector3Int(0, 1, 0));
+		ExplodeCell(originCell + new Vector3Int(0, -1, 0));
+		ExplodeCell(originCell + new Vector3Int(1, 0, 0));
+		ExplodeCell(originCell + new Vector3Int(-1, 0, 0));
+		// bomb with a larger range
+		// if (ExplodeCell(originCell);)
+		// {
+		// 	ExplodeCell(originCell + new Vector3Int(2, 0, 0));
+		// }
 		
-		if (ExplodeCell(originCell + new Vector3Int(0, 1, 0)))
-		{
-			ExplodeCell(originCell + new Vector3Int(0, 2, 0));
-		}
+		// if (ExplodeCell(originCell + new Vector3Int(0, 1, 0)))
+		// {
+		// 	ExplodeCell(originCell + new Vector3Int(0, 2, 0));
+		// }
 		
-		if (ExplodeCell(originCell + new Vector3Int(-1, 0, 0)))
-		{
-			ExplodeCell(originCell + new Vector3Int(-2, 0, 0));
-		}
+		// if (ExplodeCell(originCell + new Vector3Int(-1, 0, 0)))
+		// {
+		// 	ExplodeCell(originCell + new Vector3Int(-2, 0, 0));
+		// }
 		
-		if (ExplodeCell(originCell + new Vector3Int(0, -1, 0)))
-		{
-			ExplodeCell(originCell + new Vector3Int(0, -2, 0));
-		}
+		// if (ExplodeCell(originCell + new Vector3Int(0, -1, 0)))
+		// {
+		// 	ExplodeCell(originCell + new Vector3Int(0, -2, 0));
+		// }
 
 	}
 

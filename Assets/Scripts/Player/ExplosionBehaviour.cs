@@ -10,13 +10,13 @@ public class ExplosionBehaviour : MonoBehaviour
         for (int i = 0; i < rays.Length; i++) {
             rays[i] = Physics2D.Raycast(transform.position, raysDirection[i], rayRange);
             if (rays[i].collider != null)
-                print(rays[i].collider.gameObject);
+                // print(rays[i].collider.gameObject);
                 explosionOfCreatures(rays[i].collider.gameObject);
         }
     }
 
     private void explosionOfCreatures(GameObject obj) {
-        if(obj.layer == 6) {
+        if(obj.gameObject.tag == "Enemy" || obj.gameObject.tag == "Player") {
             obj.GetComponent<LifeController>().TakeDamage(1);
         }
     }

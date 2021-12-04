@@ -5,18 +5,27 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D), typeof(Collider2D))]
 public class DumbEnemy : MonoBehaviour
 {
+    [Header("Movement")]
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private float speed;
     [SerializeField] private Vector2 Direction; 
     private float senseOfDirection = 1;
+
+    [Header("Visual")]
     [SerializeField] SpriteRenderer spr;
     [SerializeField] Animator anim;
 
-    // Update is called once per frame
+    [SerializeField] public bool isWorm = true;
+
     void Update() {
-        rb.velocity = senseOfDirection * Direction * speed * Time.deltaTime;
-        // print(Mathf.Sign(rb.velocity.y));
+        if (isWorm) {
+            print("é uma minhoca, e está se movendo");
+            rb.velocity = senseOfDirection * Direction * speed * Time.deltaTime;
+        } else if (!isWorm) {
+            rb.velocity = Vector2.zero;
+        }
         anim.SetFloat("yVelocity",Mathf.Sign(rb.velocity.y));
+
         if(rb.velocity.y != 0  && rb.velocity.x == 0) {
             anim.SetBool("hasVerticalSpeed", true);
         } else {
