@@ -193,6 +193,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5041902939271227812, guid: d6d5b8ef8adb77c4183576f334ce3b60, type: 3}
   m_PrefabInstance: {fileID: 19923277}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &110789308 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5010203614276269517, guid: f012d2986d7e2c5478c018b556fb244d, type: 3}
+  m_PrefabInstance: {fileID: 2937014163938388660}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &131333644
 GameObject:
   m_ObjectHideFlags: 0
@@ -4527,6 +4538,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 36457946625813466, guid: f012d2986d7e2c5478c018b556fb244d, type: 3}
+      propertyPath: m_Name
+      value: bombtext
+      objectReference: {fileID: 0}
     - target: {fileID: 1790862406803517187, guid: f012d2986d7e2c5478c018b556fb244d, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -4958,6 +4973,10 @@ PrefabInstance:
       propertyPath: tilemap
       value: 
       objectReference: {fileID: 1083269600}
+    - target: {fileID: 7386090304667776825, guid: 8401d2a16ee6bf942a0cba6158957800, type: 3}
+      propertyPath: bombText
+      value: 
+      objectReference: {fileID: 110789308}
     - target: {fileID: 7386090304667776825, guid: 8401d2a16ee6bf942a0cba6158957800, type: 3}
       propertyPath: m_Enabled
       value: 1
