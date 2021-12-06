@@ -4,8 +4,12 @@ using UnityEngine;
 
 public class PlayerCollision : MonoBehaviour {
     private LifeController _lifeController;
-
     private SceneCaller _sceneCaller;
+
+    [SerializeField] private Transform respawnPoint;
+    [SerializeField] private float respawnSpeed;
+    [SerializeField] private float disableCooldown;
+    
     private void Awake() {
         _lifeController = GetComponent<LifeController>();
         _sceneCaller = FindObjectOfType<SceneCaller>();
@@ -24,4 +28,21 @@ public class PlayerCollision : MonoBehaviour {
             _lifeController.TakeDamage(1);
         }
     }
+
+    public void Respawn() {
+        PlayerBehaviour.instance.GetComponent<PlayerInput>().enabled = false;
+        PlayerBehaviour.instance.GetComponent<PlayerMovement>().enabled = false;
+        GetComponent<Collider2D>().enabled = false;
+        GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+        transform.position = respawnPoint.position;
+        Invoke("EnableInput", disableCooldown);
+    }
+
+    private void EnableInput() {
+        GetComponent<Collider2D>().enabled = true;
+        PlayerBehaviour.instance.GetComponent<PlayerInput>().enabled = true;
+        PlayerBehaviour.instance.GetComponent<PlayerMovement>().enabled = true;
+    }
+
+    
 }

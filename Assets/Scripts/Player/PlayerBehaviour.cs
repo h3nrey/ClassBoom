@@ -5,6 +5,7 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D), typeof(Collider2D))]
 public class PlayerBehaviour : MonoBehaviour
 {
+    public static PlayerBehaviour instance;
     internal Rigidbody2D rb;
     public bool storyMode = true;
 
@@ -18,6 +19,9 @@ public class PlayerBehaviour : MonoBehaviour
     [SerializeField] internal PlayerInput _playerInput;
     [SerializeField] internal PlayerAnimation _playerAnimation;
 
+    private void Awake() {
+        instance = this;
+    }
     private void Start() {
         rb = GetComponent<Rigidbody2D>();
         graphic = GetComponentInChildren<SpriteRenderer>();

@@ -19,7 +19,6 @@ public class DumbEnemy : MonoBehaviour
 
     void Update() {
         if (isWorm) {
-            print("é uma minhoca, e está se movendo");
             rb.velocity = senseOfDirection * Direction * speed * Time.deltaTime;
         } else if (!isWorm) {
             rb.velocity = Vector2.zero;

@@ -50,6 +50,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   life: 1
   isPlayer: 0
+  lifeUI: {fileID: 0}
+  cores: []
+  tempoDePiscada: 4
+  spr: {fileID: 5041902939271227813}
 --- !u!114 &5041902939271227810
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -67,6 +71,7 @@ MonoBehaviour:
   Direction: {x: 1, y: 0}
   spr: {fileID: 5041902939271227813}
   anim: {fileID: 497024311}
+  isWorm: 1
 --- !u!212 &5041902939271227813
 SpriteRenderer:
   m_ObjectHideFlags: 0
