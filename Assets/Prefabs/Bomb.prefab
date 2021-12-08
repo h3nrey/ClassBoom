@@ -47,7 +47,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosionCooldown: 0.5
-  bombCoolddown: 2.5
+  bombCoolddown: 2
   triggerCooldown: 0.32
   Destructable:
     serializedVersion: 2
