@@ -18,7 +18,10 @@ public class PlayerCollision : MonoBehaviour {
         switch (other.gameObject.tag) {
             case "Explosion": _lifeController.TakeDamage(1); break;
             case "Enemy": _lifeController.TakeDamage(1); break;
-            case "WinDoor": _sceneCaller.CallCoroutine("WinGame"); break;
+            case "WinDoor": 
+            GetComponent<PlayerAnimation>().WinThePhase();
+            _sceneCaller.CallCoroutine("WinGame"); 
+            break;
             default: break;
         }
     }

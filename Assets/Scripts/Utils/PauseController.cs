@@ -7,6 +7,7 @@ public class PauseController : MonoBehaviour {
     [SerializeField] SceneCaller _sceneCaller;
     public bool isPaused = false;
     [SerializeField] GameObject pauseCanvas;
+
     private void Update() {
         if(Input.GetKeyDown(KeyCode.P))
             TogglePause();

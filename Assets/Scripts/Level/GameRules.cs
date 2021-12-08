@@ -12,12 +12,22 @@ public class GameRules : MonoBehaviour {
     private Vector3 randomPos;
     private int winDoorInstantiate = 0;
 
+    [Header("Transition animations")]
+    [SerializeField] Animator transitionAnim;
+
+    private void Start() {
+        transitionAnim.SetTrigger("exploding");
+    }
     private void Update() {
         totalOfEnemies = GameObject.FindGameObjectsWithTag(enemyTag).Length;
         if(totalOfEnemies <= 0)
             CreateDoor();
     }
 
+
+    public void Fade(string fadeName) {
+        transitionAnim.SetTrigger(fadeName);
+    }
     private void CreateDoor() {
         if(winDoorInstantiate < 1) {
             randomPos.x = Random.Range(limitX.x, limitX.y);

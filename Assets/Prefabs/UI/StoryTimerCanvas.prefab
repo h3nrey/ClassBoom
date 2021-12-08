@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3624005243284382201}
   - component: {fileID: 5010203614276269517}
   m_Layer: 5
-  m_Name: TIME
+  m_Name: bombtext
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -633,7 +633,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -63.800003}
+  m_AnchoredPosition: {x: 0, y: -63.80005}
   m_SizeDelta: {x: 1258, y: 110.06001}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2937014163296684820

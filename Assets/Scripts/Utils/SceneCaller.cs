@@ -20,5 +20,6 @@ public class SceneCaller : MonoBehaviour {
     }
     public void setSceneTimer(float cooldown) {
         SceneTimer = cooldown;
+        print(SceneTimer);
     }
 }
