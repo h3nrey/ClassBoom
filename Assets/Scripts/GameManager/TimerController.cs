@@ -8,6 +8,7 @@ public class TimerController : MonoBehaviour {
     [SerializeField] TMP_Text timerText;
 
     private SceneCaller _sceneCaller;
+    [SerializeField] private Animator timeAnimation;
 
     void Start() {
         _sceneCaller = FindObjectOfType<SceneCaller>();
@@ -22,7 +23,8 @@ public class TimerController : MonoBehaviour {
             timerText.text = roundedTime.ToString();
 
             if(time <= 0) {
-                print("times up");
+                timeAnimation.SetTrigger("timesup");
+                _sceneCaller.setSceneTimer(1.5f);
                 _sceneCaller.CallCoroutine("GameOver");
             }
         } 
