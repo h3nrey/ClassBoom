@@ -6,21 +6,95 @@
     <title>Unity WebGL Player | ClassBoom</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap');
+
+      body{
+        background-color: rgb(57, 38, 63);
+      }
+
+      *{
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      .container{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+      }
+      .content-wrapper{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        background-color: hsl(286, 34%, 44%);
+      }
+
+      .toppers{
+        margin-top: 1rem;
+      }
+      .details {
+        font-family: 'Russo One', sans-serif;
+        background-color: hsl(286, 34%, 44%);
+        width: 100%;
+        padding: 1rem;
+        color: #551a8b;
+      }
+
+      .details h1{
+        color: #d5a8ff;
+        font-size: 3rem;
+      }
+
+      .details p{
+        color: rgb(203, 194, 186);
+      }
+
+      .details a{
+        color: rgb(203, 194, 186);
+        font-weight: 400;
+        font-size: 1rem;
+        text-decoration: none;
+        transition: 0.4s;
+      }
+
+      .details a:hover{
+        color: #551a8b;
+        font-size: 1.1rem;
+      }
+    </style>
   </head>
   <body>
-    <div id="unity-container" class="unity-desktop">
-      <canvas id="unity-canvas" width=960 height=600></canvas>
-      <div id="unity-loading-bar">
-        <div id="unity-logo"></div>
-        <div id="unity-progress-bar-empty">
-          <div id="unity-progress-bar-full"></div>
+    <div class="container">
+      <div class="content-wrapper">
+        <div id="unity-container" class="unity-desktop">
+          <canvas id="unity-canvas" width=960 height=600></canvas>
+          <div id="unity-loading-bar">
+            <div id="unity-logo"></div>
+            <div id="unity-progress-bar-empty">
+              <div id="unity-progress-bar-full"></div>
+            </div>
+          </div>
+          <div id="unity-warning"> </div>
+          <div id="unity-footer">
+            <div id="unity-webgl-logo"></div>
+            <div id="unity-fullscreen-button"></div>
+            <div id="unity-build-title">ClassBoom</div>
+          </div>
         </div>
-      </div>
-      <div id="unity-warning"> </div>
-      <div id="unity-footer">
-        <div id="unity-webgl-logo"></div>
-        <div id="unity-fullscreen-button"></div>
-        <div id="unity-build-title">ClassBoom</div>
+        <div class="details">
+          <h1>ClassBoom</h1>
+          <div class="controls toppers">
+            <h2>Controls</h2>
+            <p>Movement: arrow keys <br> Bomb: SPACE <br> Pause: P</p>
+          </div>
+          <div class="credits toppers">
+            <h2>Credits</h2>
+            <h3>Programing : <a href="https://github.com/h3nrey">Pedro Novaes</a></h3>
+            <h3>UI : <a href="https://www.instagram.com/heloy_art/">Heloísa Milena</a></h3>
+          </div>
+        </div>
       </div>
     </div>
     <script>
